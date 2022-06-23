@@ -20,6 +20,12 @@
         </license>
     </licenses>
 
+    <scm>
+        <connection>scm:git:git://github.com/Unitrust-tsa/tsa-sdk-java.git</connection>
+        <developerConnection>scm:git:https://github.com/Unitrust-tsa/tsa-sdk-java.git</developerConnection>
+        <url>https://github.com/Unitrust-tsa/tsa-sdk-java</url>
+    </scm>
+
     <developers>
         <developer>
             <name>JenphyJohn</name>
@@ -114,6 +120,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.5</version>
             </plugin>
         </plugins>
     </build>
@@ -155,6 +162,7 @@
                         <artifactId>maven-gpg-plugin</artifactId>
                         <executions>
                             <execution>
+                                <id>sign-artifacts</id>
                                 <phase>verify</phase>
                                 <goals>
                                     <goal>sign</goal>
@@ -167,11 +175,11 @@
             <distributionManagement>
                 <snapshotRepository>
                     <id>ossrh</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                    <url>https://s01.oss.sonatype.org/content/repositories/snapshots/</url>
                 </snapshotRepository>
                 <repository>
                     <id>ossrh</id>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+                    <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                 </repository>
             </distributionManagement>
         </profile>
