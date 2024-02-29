@@ -1,19 +1,19 @@
 package cn.tsa.sdk.request.ipr;
 
-import cn.tsa.sdk.model.ipr.IprDownloadModel;
+import cn.tsa.sdk.model.ipr.IprApplyModel;
 import cn.tsa.sdk.request.BaseRequest;
 
 /**
  * @author hongwei
  */
-public class OpusDownloadRequest extends BaseRequest<IprDownloadModel> {
+public class IprApplyRequest extends BaseRequest<IprApplyModel> {
 
 
-    public OpusDownloadRequest(String method) {
+    public IprApplyRequest(String method) {
         super(method, null);
     }
 
-    public OpusDownloadRequest(String method, String version) {
+    public IprApplyRequest(String method, String version) {
         super(method, version);
     }
 
