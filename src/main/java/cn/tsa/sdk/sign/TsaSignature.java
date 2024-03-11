@@ -341,10 +341,10 @@ public class TsaSignature {
      * </p>
      *
      * @param params
-     * @param publicKey       公钥
-     * @param cusPrivateKey   商户私钥
-     * @param isCheckSign     是否验签
-     * @param isDecrypt       是否解密
+     * @param publicKey     公钥
+     * @param cusPrivateKey 商户私钥
+     * @param isCheckSign   是否验签
+     * @param isDecrypt     是否解密
      * @return 解密后明文，验签失败则异常抛出
      * @throws TsaSignException
      */
@@ -380,10 +380,10 @@ public class TsaSignature {
      * </p>
      *
      * @param params
-     * @param publicKey       公钥
-     * @param cusPrivateKey   商户私钥
-     * @param isCheckSign     是否验签
-     * @param isDecrypt       是否解密
+     * @param publicKey     公钥
+     * @param cusPrivateKey 商户私钥
+     * @param isCheckSign   是否验签
+     * @param isDecrypt     是否解密
      * @return 解密后明文，验签失败则异常抛出
      * @throws TsaSignException
      */
@@ -428,7 +428,7 @@ public class TsaSignature {
             int offSet = 0;
             byte[] cache;
             int i = 0;
-            // 对数据分段加密  
+            // 对数据分段加密
             while (inputLen - offSet > 0) {
                 if (inputLen - offSet > MAX_ENCRYPT_BLOCK) {
                     cache = cipher.doFinal(data, offSet, MAX_ENCRYPT_BLOCK);
@@ -474,7 +474,7 @@ public class TsaSignature {
             int offSet = 0;
             byte[] cache;
             int i = 0;
-            // 对数据分段解密  
+            // 对数据分段解密
             while (inputLen - offSet > 0) {
                 if (inputLen - offSet > MAX_DECRYPT_BLOCK) {
                     cache = cipher.doFinal(encryptedData, offSet, MAX_DECRYPT_BLOCK);
