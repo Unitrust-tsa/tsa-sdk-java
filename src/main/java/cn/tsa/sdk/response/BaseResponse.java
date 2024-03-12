@@ -1,5 +1,6 @@
 package cn.tsa.sdk.response;
 
+import cn.tsa.sdk.model.common.Pageable;
 import cn.tsa.sdk.util.StringUtils;
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Getter;
@@ -12,7 +13,7 @@ import lombok.Setter;
  */
 @Setter
 @Getter
-public abstract class BaseResponse {
+public abstract class BaseResponse extends Pageable {
 
     @JSONField(name = "request_id")
     private String requestId;
