@@ -17,8 +17,13 @@ public class Pageable {
      */
     private Integer size;
 
+    /**
+     * 总条数.
+     */
     private Integer total;
-
+    /**
+     * 总页数.
+     */
     private Integer pages;
 
     public Integer getSize() {
