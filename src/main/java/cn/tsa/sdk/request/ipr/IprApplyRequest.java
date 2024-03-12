@@ -1,24 +1,15 @@
 package cn.tsa.sdk.request.ipr;
 
-import cn.tsa.sdk.model.ipr.IprApplyModel;
 import cn.tsa.sdk.request.BaseRequest;
+import cn.tsa.sdk.response.ipr.IprApplyResponse;
 
 /**
  * @author hongwei
  */
-public class IprApplyRequest extends BaseRequest<IprApplyModel> {
-
-
-    public IprApplyRequest(String method) {
-        super(method, null);
-    }
-
-    public IprApplyRequest(String method, String version) {
-        super(method, version);
-    }
+public class IprApplyRequest extends BaseRequest<IprApplyResponse> {
 
     @Override
     protected String method() {
-        return "";
+        return "ipr.opus.apply";
     }
 }
