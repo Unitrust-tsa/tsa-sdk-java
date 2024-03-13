@@ -37,16 +37,27 @@ public class ClassUtil {
         if (!(genType instanceof ParameterizedType)) {
             throw new RuntimeException("class " + clazz.getName() + " 没有指定父类泛型");
         } else {
-            Type[] params = ((ParameterizedType) genType).getActualTypeArguments();
+            ParameterizedType parameterizedType = (ParameterizedType) genType;
+            Type[] params = parameterizedType.getActualTypeArguments();
 
             if (index >= params.length || index < 0) {
                 throw new RuntimeException("泛型索引不正确，index:" + index);
             }
-            if (!(params[index] instanceof Class)) {
-                throw new RuntimeException(params[index] + "不是Class类型");
+            Type param = params[index];
+            if (!(param instanceof Class)) {
+                // 泛型套泛型
+                if (param instanceof ParameterizedType) {
+                    param = ((ParameterizedType) param).getRawType();
+                    if (!(param instanceof Class)) {
+                        // 二层以上泛型暂不支持
+                        throw new RuntimeException(param + "不是Class类型");
+                    }
+                } else {
+                    throw new RuntimeException(param + "不是Class类型");
+                }
             }
 
-            Class<?> retClass = (Class<?>) params[index];
+            Class<?> retClass = (Class<?>) param;
             // 缓存起来
             CLASS_GENERIC_TYPE_CACHE.put(cacheKey, retClass);
 

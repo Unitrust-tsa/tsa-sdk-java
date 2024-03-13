@@ -47,6 +47,7 @@
         <junit.version>4.8</junit.version>
         <commons.logging.version>1.2</commons.logging.version>
         <lombok.version>1.18.4</lombok.version>
+        <hutool.version>5.5.2</hutool.version>
     </properties>
 
     <dependencies>
@@ -83,7 +84,6 @@
             <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
-
     </dependencies>
 
     <build>

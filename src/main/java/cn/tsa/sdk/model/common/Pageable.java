@@ -17,6 +17,15 @@ public class Pageable {
      */
     private Integer size;
 
+    /**
+     * 总条数.
+     */
+    private Integer total;
+    /**
+     * 总页数.
+     */
+    private Integer pages;
+
     public Integer getSize() {
         if (size == null || size > 100) {
             return 20;
@@ -37,5 +46,21 @@ public class Pageable {
             return 1;
         }
         return page;
+    }
+
+    public Integer getTotal() {
+        return total;
+    }
+
+    public void setTotal(Integer total) {
+        this.total = total;
+    }
+
+    public Integer getPages() {
+        return pages;
+    }
+
+    public void setPages(Integer pages) {
+        this.pages = pages;
     }
 }
