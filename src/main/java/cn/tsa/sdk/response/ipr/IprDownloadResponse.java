@@ -1,6 +1,8 @@
-package cn.tsa.sdk.model.ipr;
+package cn.tsa.sdk.response.ipr;
 
+import cn.tsa.sdk.response.BaseResponse;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
 
 /**
@@ -8,7 +10,8 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(chain = true)
-public class IprDownloadModel {
+@EqualsAndHashCode(callSuper = true)
+public class IprDownloadResponse extends BaseResponse {
     /**
      * 唯一键(申请作品唯一标识:serialNo)
      */
