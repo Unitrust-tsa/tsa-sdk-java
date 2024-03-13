@@ -5,7 +5,7 @@
 
     <groupId>cn.tsa.sdk</groupId>
     <artifactId>tsa-sdk-java</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
     <name>tsa-sdk-java</name>
     <url>https://github.com/Unitrust-tsa/tsa-sdk-java</url>
@@ -47,7 +47,6 @@
         <junit.version>4.8</junit.version>
         <commons.logging.version>1.2</commons.logging.version>
         <lombok.version>1.18.4</lombok.version>
-        <hutool.version>5.5.2</hutool.version>
     </properties>
 
     <dependencies>
